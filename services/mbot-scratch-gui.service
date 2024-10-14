@@ -3,6 +3,6 @@ Description=Server for the MBot Scratch GUI
 After=network.target
 
 [Service]
-ExecStart=sudo npx -y serve -s /data/www/scratch/
+ExecStart=sudo npx -y serve -s /data/www/scratch/ -l 8602
 [Install]
 WantedBy=multi-user.target
