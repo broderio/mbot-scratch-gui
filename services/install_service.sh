@@ -5,7 +5,7 @@ if [ ! -f "/etc/systemd/system/mbot-scratch-gui.service" ]; then
   # This is the first time installing.
   sudo cp mbot-scratch-gui.service /etc/systemd/system/
 
-  echo "Enabling MBot Scratch GUI  service."
+  echo "Enabling MBot Scratch GUI service."
   # Reload the service.
   sudo systemctl daemon-reload
   sudo systemctl enable mbot-scratch-gui.service
