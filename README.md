@@ -25,3 +25,24 @@ To start the MBot Scratch GUI, run the following command. If you have enabled th
 ```bash
 npm start
 ```
+
+## Development Notes
+The original Scratch GUI and Scratch VM repositories receive about 100 commits per week because of dependency bot updates. This leads to Scratch creating several new releases of the VM and GUI *every week*. Every once in a while, we should sync our forks with the original repositories. To do this, use the following commands.
+
+### GUI
+```bash
+git remote add upstream https://github.com/scratchfoundation/scratch-gui.git
+git fetch upstream
+git rebase upstream/develop
+```
+At this point, there will likely be merge conflicts. They should only be in [`package-lock.json`](https://github.com/broderio/mbot_scratch_gui/blob/develop/package-lock.json). Resolve these conflicts before continuing. Once the merge conflicts are resolved, finish the rebase.
+```bash
+git rebase --continue
+git config pull.rebase false
+git pull
+git push
+```
+
+### VM
+Follow the above instructions, but replace the link for the Scratch GUI with the link to the Scratch VM.
+`https://github.com/scratchfoundation/scratch-vm.git`
