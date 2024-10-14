@@ -11,8 +11,7 @@ cd mbot_scratch_vm
 
 Now, we can install the GUI.
 ```bash
-npm install
-npm link scratch-vm
+./install_scripts/install.sh
 ```
 To enable the service that will host the MBot Scratch application on boot, run the following commands.
 ```bash

@@ -3,7 +3,6 @@ Description=Server for the MBot Scratch GUI
 After=network.target
 
 [Service]
-ExecStart=npm start --prefix /home/mbot/mbot-scratch-gui/
-
+ExecStart=sudo npx -y serve -s /data/www/scratch/
 [Install]
 WantedBy=multi-user.target

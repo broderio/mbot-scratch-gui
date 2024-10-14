@@ -75,7 +75,7 @@ const baseConfig = new ScratchWebpackConfigBuilder(
     })
     .addModuleRule({
         test: /\.(svg|png|wav|mp3|gif|jpg)$/,
-        resourceQuery: /^$/, // reject any query string
+        // resourceQuery: /^$/, // reject any query string
         type: 'asset' // let webpack decide on the best type of asset
     })
     .addModuleRule({
