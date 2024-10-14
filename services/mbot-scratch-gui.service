@@ -1,9 +1,9 @@
 [Unit]
-Description=Server for the MBot scratch
+Description=Server for the MBot Scratch GUI
 After=network.target
 
 [Service]
-ExecStart=/home/mbot/.nvm/versions/node/v18.20.4/bin/npm start --prefix /home/mbot/scratch/mbot-scratch-gui/
+ExecStart=npm start --prefix /home/mbot/mbot-scratch-gui/
 
 [Install]
 WantedBy=multi-user.target
