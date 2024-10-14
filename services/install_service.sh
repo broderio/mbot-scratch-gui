@@ -14,7 +14,7 @@ else
   # This service has already been installed. Pull new changes then restart it.
   sudo cp mbot-scratch-gui.service /etc/systemd/system/
   # Fill in the path to this env.
-  echo "MBot Scratch GUI  service is already enabled. Restarting it."
+  echo "MBot Scratch GUI service is already enabled. Restarting it."
   sudo systemctl daemon-reload
   sudo systemctl restart mbot-scratch-gui.service
 fi
